@@ -9,6 +9,7 @@ class Animal:
 
 class Cat(Animal):
     def __init__(self,name):
+        #注意super的写法
         super(Cat, self).__init__(name)
         print("create a cat object")
     def catchMouce(self,size):
@@ -21,6 +22,7 @@ if __name__ == "__main__":
     print(hasattr(C,"catchMouce"))
     print(hasattr(C, "eat"))
     print(hasattr(C, "sleep"))
+    #动态获取和调用方法
     fn=getattr(C,"eat")
     fn("jerry")
 
