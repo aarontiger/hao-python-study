@@ -10,7 +10,7 @@ def writeFile(fileName):
     #f = open(fileName, 'w')
     #追加写入模式
     f = open(fileName, 'a')
-    f.write('Hello, world!')
+    f.write('Hello, world!keep eye on my mind')
     f.close()
 
 writeFile("./haohao/test22.txt")

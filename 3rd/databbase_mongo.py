@@ -7,6 +7,6 @@ k = mydb.collection_names(include_system_collections=True)  # 返回当前库下
 print(k)
 
 
-mycol = mydb["report"]
+mycol = mydb["device"]
 for x in mycol.find():
   print(x)

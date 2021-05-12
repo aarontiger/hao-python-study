@@ -15,7 +15,7 @@ def producer_demo():
     security_protocol ='SASL_PLAINTEXT',
     sasl_plain_username ='admin',
     sasl_plain_password ='admin',
-    bootstrap_servers = ['192.168.90.7:9092'],
+    bootstrap_servers = ['192.168.90.21:9092'],
     key_serializer=lambda k: json.dumps(k).encode(),
     value_serializer=lambda v: json.dumps(v).encode()
     )
@@ -25,10 +25,10 @@ def producer_demo():
         future = producer.send(
             'kafka_demo',
             # key='count_num',  # 同一个key值，会被送至同一个分区
-            value=str(i),
+            value="bingoyes"+str(i),
             # partition=1
             )  # 向分区1发送消息
-        print("send {}".format(str(i)))
+        print("send {}".format("bingoyes"+str(i)))
         try:
             future.get(timeout=10) # 监控是否发送成功
         except kafka_errors:  # 发送失败抛出kafka_errors
