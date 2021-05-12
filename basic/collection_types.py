@@ -12,14 +12,14 @@ for shuiguo in tuple_1:
     print(shuiguo)
 
 #dict
-dic_1 ={"name":'郝树虎','age':47}
+dic_1 ={"name":'郝树虎','weight':70}
 keys = dic_1.keys()
 print(keys.__class__)
 for key in keys:
     print(key);
 
 #set
-s=set()
+s=set("小明","丽丽")
 s.add('haoshuhu')
 print(len(s))
 print(s)
