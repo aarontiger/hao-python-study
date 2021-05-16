@@ -14,11 +14,9 @@ def helloMethod():
     print(a)
 
 if __name__ == "__main__":
-    print ('This is main of module "hello.py"')
-    print(sys.argv[1])
-    print(sys.argv.__len__())
+
     A =animal("tiger")
     A.eat(sys.argv[1])
 
-    helloMethod()
+    # helloMethod()
 

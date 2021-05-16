@@ -1,7 +1,7 @@
 '''
-Author:     DuMin SONG
-organization: 光环国际
-Project:    linear_regression
+Author:     Shuhu Hao
+organization: bingoyes
+Project:    Python Study
 software:   PyCharm
 '''
 
@@ -26,8 +26,3 @@ except Exception as E:
     print(E)
 finally:
     print('无论是否有异常，都会执行本段代码')
-f = c ** d
-print(c)
-print(d)
-print(e)
-print(f)
