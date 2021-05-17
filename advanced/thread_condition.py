@@ -2,7 +2,6 @@ import threading
 
 con = threading.Condition()
 
-
 def job1():
     con.acquire()
     print("JOB1：床前明月光")
@@ -27,8 +26,7 @@ def job2():
 
     con.release()
 
-
-def main():
+if __name__ == "__main__":
     t1 = threading.Thread(target=job1)
     t2 = threading.Thread(target=job2)
 
@@ -37,7 +35,3 @@ def main():
 
     t1.join()
     t2.join()
-
-
-if __name__ == "__main__":
-    main()

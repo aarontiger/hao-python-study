@@ -1,15 +1,30 @@
-import types
+class ClassA(object):
 
-class Person(object):
-  personName = '小明'
-  def __init__(self,name):
-    self.personName = name
+    def test123(self):
+
+        print('ClassA.test123() running')
 
 
-def eatFood(self):
-  print('%s在吃东西' % self.personName)
+class ClassB(object):
+    def test456(self):
+        print('ClassB.test456() runing')
+        return 10000
 
-Person.eat = eatFood
 
-p = Person('小刚')
-p.eat()
+def createInstance(module_name, class_name, *args, **kwargs):
+
+    module_meta = __import__(module_name, globals(), locals(), [class_name])
+    class_meta = getattr(module_meta, class_name)
+    obj = class_meta(*args, **kwargs)
+    return obj
+
+
+if __name__ == "__main__":
+
+    objectA = createInstance("oop_dynamic1", "ClassA")
+    print(hasattr(objectA,'test123'))
+    objectA.test123()
+
+    # objectB = createInstance("oop_dynamic1", "ClassB")
+    # retValue = eval("objectB.test456")()
+    # print(retValue)
