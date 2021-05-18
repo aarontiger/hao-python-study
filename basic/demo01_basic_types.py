@@ -4,6 +4,7 @@ organization: bingoyes
 Project:    Python Study
 software:   PyCharm
 '''
+# -*- coding: utf-8 -*-
 
 # a = 18
 # a = 3.141583485983758439584587843573845

@@ -14,11 +14,15 @@ class Cat(Animal):
         print("create a cat object："+name)
     def catch(self,foodName):
         print("the cat: {} catch：  {}".format(self.name,foodName))
+    def eat(self,food):
+        print("this is in child， an animal: "+self.name+ " can eat :"+food);
 
 if __name__ == "__main__":
     print ('This is main of module "oop.py"')
     C =Cat("汤姆")
     C.catch("杰瑞")
+
+    # C.eat("猫饼干")
 
     # print(isinstance(C,Animal))
 

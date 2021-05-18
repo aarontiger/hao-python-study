@@ -21,10 +21,9 @@ def createInstance(module_name, class_name, *args, **kwargs):
 
 if __name__ == "__main__":
 
-    objectA = createInstance("oop_dynamic1", "ClassA")
+    objectA = createInstance("oop_dynamic2", "ClassA")
     print(hasattr(objectA,'test123'))
     objectA.test123()
 
-    # objectB = createInstance("oop_dynamic1", "ClassB")
-    # retValue = eval("objectB.test456")()
-    # print(retValue)
+    objectB = createInstance("oop_dynamic2", "ClassB")
+    objectB.test456()

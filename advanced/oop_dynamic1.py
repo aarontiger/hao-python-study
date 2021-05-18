@@ -20,12 +20,16 @@ if __name__ == "__main__":
     p.eat('油条')
 
     #增加属性
-    p.age = 18
-    print(p.age)
+    # p.age = 18
+    # print(p.age)
 
-    #动态获取和调用方法
-    fn=getattr(p,"eat")
-    fn("面包")
+    #动态获取和调用方法,方式 1
+    # a="eat"
+    # fn=getattr(p,a)
+    # fn("面包")
+
+    # 动态获取和调用方法,方式 2
+    # eval("p.eat")("薯片")
 
 
 
