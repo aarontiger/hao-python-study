@@ -3,14 +3,18 @@
 import tornado.ioloop
 import tornado.web
 
-class MainHandler(tornado.web.RequestHandler):
+class BejingHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("Hello world")
+        self.write("I'm at BeiJing get")
 
+class TianjinHandler(tornado.web.RequestHandler):
+    def post(self):
+        self.write("I'm at TianJin post")
 
 def make_app():
     return tornado.web.Application([
-        (r"/abc", MainHandler),
+        (r"/beijing", BejingHandler),
+        (r"/tianjin", TianjinHandler)
     ])
 
 

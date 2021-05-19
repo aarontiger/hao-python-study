@@ -3,7 +3,6 @@ from kafka.errors import kafka_errors
 import traceback
 import json
 
-
 def producer_demo():
     # 假设生产的消息为键值对（不是一定要键值对），且序列化方式为json
     # producer = KafkaProducer(
@@ -15,7 +14,7 @@ def producer_demo():
     security_protocol ='SASL_PLAINTEXT',
     sasl_plain_username ='admin',
     sasl_plain_password ='admin',
-    bootstrap_servers = ['192.168.90.21:9092'],
+    bootstrap_servers = ['192.168.90.5:9092'],
     key_serializer=lambda k: json.dumps(k).encode(),
     value_serializer=lambda v: json.dumps(v).encode()
     )
